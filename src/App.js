@@ -5,7 +5,19 @@ const App = () => {
 
     return(
         <div className="app">
-            <h1>App</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
+            <h1 className="header">Principles</h1>
         </div>
     )
 }
