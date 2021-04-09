@@ -1,11 +1,10 @@
-
 import React, {useEffect, useState} from "react"
-import axios from "axios"
+import "./index.scss"
 
 const App = () => {
 
     return(
-        <div>
+        <div className="app">
             <h1>App</h1>
         </div>
     )

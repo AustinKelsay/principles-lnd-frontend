@@ -1,0 +1,11 @@
+$primary-color: #d70913d7;
+$secondary-color: #838383;
+
+.app {
+    display: flex;
+    width: 80%;
+    margin: 1% auto;
+    background: $secondary-color;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+}
