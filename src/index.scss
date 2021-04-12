@@ -1,10 +1,13 @@
-$app-background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
-$primary-color: #d70913d7;
-$secondary-color: #838383;
+// https://coolors.co/058ed9-fdfffc-d70913-000000-b0c7bd
+$red-gradient: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+$black-gradient: linear-gradient(to bottom, #000000 0%, #434343 74%);
+$red: #d70913d7;
+$grey: #B0C7BD;
+$blue: #058ED9;
 
 #root {
     background-color: #000000;
-    background-image: linear-gradient(to bottom, #000000 0%, #434343 74%);
+    background-image: $black-gradient;
     border: 1px solid oldlace;
     border-radius: 25px;
 }
