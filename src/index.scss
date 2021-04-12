@@ -2,13 +2,13 @@
 $red-gradient: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
 $black-gradient: linear-gradient(to bottom, #000000 0%, #434343 74%);
 $red: #d70913d7;
-$grey: #B0C7BD;
+$grey: #353535;
 $blue: #058ED9;
 
 #root {
     background-color: #000000;
     background-image: $black-gradient;
-    border: 1px solid oldlace;
+    border: 2px solid $red;
     border-radius: 25px;
 }
 

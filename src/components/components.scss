@@ -1,8 +1,8 @@
-// https://coolors.co/058ed9-fdfffc-d70913-000000-b0c7bd
+// https://coolors.co/058ed9-fdfffc-d70913-000000-adadad
 $red-gradient: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
 $black-gradient: linear-gradient(to bottom, #000000 0%, #434343 74%);
 $red: #d70913d7;
-$grey: #B0C7BD;
+$grey: #ADADAD;
 $blue: #058ED9;
 
 .header {
@@ -10,8 +10,8 @@ $blue: #058ED9;
     flex-direction: column;
     width: 60%;
     margin: 1% auto;
-    background: $secondary-color;
-    border: 2px solid $primary-color;
+    background: $grey;
+    border: 2px solid $red;
     border-radius: 5px;
 
     h1 {
@@ -40,5 +40,29 @@ $blue: #058ED9;
             border-radius: 10px;
             color: oldlace;
         }
+
+        button:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
+
+.principles {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1% auto;
+    background: $red-gradient;
+    border: 2px solid $red;
+    border-radius: 5px;
+
+    div {
+        background: $black-gradient;
+        color: oldlace;
+        border: 1px solid oldlace;
+        border-radius: 25px;
+        width: 60%;
+        margin: 1% auto;
     }
 }
