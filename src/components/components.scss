@@ -1,0 +1,41 @@
+$app-background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+$primary-color: #d70913d7;
+$secondary-color: #838383;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1% auto;
+    background: $secondary-color;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+
+    h1 {
+        margin: 1% auto;
+        margin-bottom: 0%;
+    }
+
+    h4 {
+        margin: 1% auto;
+        margin-bottom: 0%;
+    }
+
+    div {
+        width: 60%;
+        margin: 1% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        button {
+            width: 20%;
+            font-size: large;
+            padding: 2%;
+            background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+            border: 1px solid oldlace;
+            border-radius: 10px;
+            color: oldlace;
+        }
+    }
+}

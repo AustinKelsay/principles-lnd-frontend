@@ -1,26 +1,14 @@
-$app-background: #2d3436 linear-gradient(315deg, #2d3436 0%, #000000 74%);
+$app-background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
 $primary-color: #d70913d7;
 $secondary-color: #838383;
 
-html {
-    background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
-    background-repeat: no-repeat;
+#root {
+    background-color: #000000;
+    background-image: linear-gradient(to bottom, #000000 0%, #434343 74%);
+    border: 1px solid oldlace;
+    border-radius: 25px;
 }
 
 .app {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 1% auto;
-    background: $secondary-color;
-    border: 2px solid $primary-color;
-    border-radius: 5px;
 
-    h1 {
-        margin: 1% auto;
-    }
-
-    h4 {
-        margin: 1% auto;
-    }
 }
