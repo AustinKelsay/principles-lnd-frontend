@@ -2,13 +2,9 @@ $app-background: #2d3436 linear-gradient(315deg, #2d3436 0%, #000000 74%);
 $primary-color: #d70913d7;
 $secondary-color: #838383;
 
-.background {
-    width: 100%;
-    height: 100%;
-}
-
-.header {
-    margin: 1% auto;
+html {
+    background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+    background-repeat: no-repeat;
 }
 
 .app {
@@ -19,4 +15,12 @@ $secondary-color: #838383;
     background: $secondary-color;
     border: 2px solid $primary-color;
     border-radius: 5px;
+
+    h1 {
+        margin: 1% auto;
+    }
+
+    h4 {
+        margin: 1% auto;
+    }
 }
