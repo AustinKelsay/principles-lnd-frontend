@@ -5,13 +5,10 @@ $red: #d70913d7;
 $grey: #353535;
 $blue: #058ED9;
 
-#root {
+.app {
     background-color: #000000;
     background-image: $black-gradient;
     border: 2px solid $red;
     border-radius: 25px;
-}
-
-.app {
-
+    height: 98vh;
 }

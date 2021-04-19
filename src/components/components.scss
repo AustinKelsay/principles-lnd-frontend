@@ -64,5 +64,27 @@ $blue: #058ED9;
         border-radius: 25px;
         width: 60%;
         margin: 1% auto;
+        padding: 2%;
+        text-align: center;
+        padding-top: 1%;
+
+        h3 {
+            margin: 2% auto;
+            margin-top: 0.1%;
+        }
+
+        h4 {
+            margin: 1% auto;
+        }
+
+        p {
+            text-align: start;
+        }
+
+        span {
+            color: $red;
+            margin: 0 auto;
+            text-align: center;
+        }
     }
 }
