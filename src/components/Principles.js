@@ -7,10 +7,9 @@ const Principles = () => {
     const [principles, setPrinciples] = useState([])
 
     useEffect(() => {
-        axios.get('https://principles-lnd.herokuapp.com/principles')
+        axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
             setPrinciples(res.data)
-            console.log(res)
         })
         .catch
         ((err) => {
@@ -27,7 +26,7 @@ const Principles = () => {
                             <p>Problem: {principle.problem}</p>
                             <p>Diagnosis: {principle.diagnosis}</p>
                             <p>Change: {principle.change}</p>
-                            <p>User:</p>
+                            <p>User: {principle.user}</p>
                         </div>
                     )
                 })
