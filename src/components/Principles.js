@@ -25,12 +25,17 @@ const Principles = () => {
                 principles.map((principle) => {
                     return(
                         <div key={uuidv4()}>
+                            <span>Problem</span>
                             <h3>{principle.problem}</h3>
                             <span>Diagnosis</span>
                             <h4>{principle.diagnosis}</h4>
                             <span>Change</span>
                             <h4>{principle.change}</h4>
-                            <p>User: {principle.user}</p>
+                            <div>
+                                <p>User: {principle.user}</p>
+                                <button>Lightning upvote</button>
+                                <p>Up-votes: {principle.votes}</p>
+                            </div>
                         </div>
                     )
                 })

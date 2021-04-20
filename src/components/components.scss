@@ -1,7 +1,7 @@
-// https://coolors.co/058ed9-fdfffc-d70913-000000-adadad
+// https://coolors.co/058ed9-fdfffc-f5141f-000000-adadad
 $red-gradient: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
 $black-gradient: linear-gradient(to bottom, #000000 0%, #434343 74%);
-$red: #d70913d7;
+$red: #F5141F;
 $grey: #ADADAD;
 $blue: #058ED9;
 
@@ -67,10 +67,12 @@ $blue: #058ED9;
         padding: 2%;
         text-align: center;
         padding-top: 1%;
+        padding-bottom: 0;
 
         h3 {
             margin: 2% auto;
             margin-top: 0.1%;
+            border-bottom: 1px solid white;
         }
 
         h4 {
@@ -79,12 +81,41 @@ $blue: #058ED9;
 
         p {
             text-align: start;
+            font-weight: 800;
         }
 
         span {
+            font-size: 1.3rem;;
             color: $red;
-            margin: 0 auto;
-            text-align: center;
+            font-weight: 800;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin-bottom: 0;
+            padding: 0.5%;
+            padding-top: 2%;
+            border: none;
+            background: none;
+            border-top: 1px solid white;
+            border-radius: 0%;
+
+            button {
+                margin: 1%;
+                background: $blue;
+                padding: 0.5%;
+                border: 1px solid oldlace;
+                border-radius: 10px;
+                color: oldlace;
+                font-weight: 600;
+            }
+
+            button:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
         }
     }
 }
