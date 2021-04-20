@@ -18,31 +18,33 @@ const Principles = () => {
     },[])
 
     return (
-        <div className="principles">
-            {
-                principles.length
-                ?
-                principles.map((principle) => {
-                    return(
-                        <div key={uuidv4()}>
-                            <span>Problem</span>
-                            <h3>{principle.problem}</h3>
-                            <span>Diagnosis</span>
-                            <h4>{principle.diagnosis}</h4>
-                            <span>Change</span>
-                            <h4>{principle.change}</h4>
-                            <div>
-                                <p>User: {principle.user}</p>
-                                <button>Lightning upvote</button>
-                                <p>Up-votes: {principle.votes}</p>
+        <InfiniteScroll dataLength={principles.length} >
+            <div className="principles">
+                {
+                    principles.length
+                    ?
+                    principles.map((principle) => {
+                        return(
+                            <div key={uuidv4()}>
+                                <span>Problem</span>
+                                <h3>{principle.problem}</h3>
+                                <span>Diagnosis</span>
+                                <h4>{principle.diagnosis}</h4>
+                                <span>Change</span>
+                                <h4>{principle.change}</h4>
+                                <div>
+                                    <p>User: {principle.user}</p>
+                                    <button>Lightning upvote</button>
+                                    <p>Up-votes: {principle.votes}</p>
+                                </div>
                             </div>
-                        </div>
-                    )
-                })
-                :
-                <p>Loading...</p>
-            }
-        </div>
+                        )
+                    })
+                    :
+                    <p>Loading...</p>
+                }
+            </div>
+        </InfiniteScroll>
         )
 }
 
