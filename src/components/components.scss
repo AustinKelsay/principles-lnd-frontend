@@ -54,11 +54,8 @@ $blue: #058ED9;
 .principles {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    margin: 1% auto;
+    width: 100%;
     background: $red-gradient;
-    border: 2px solid oldlace;
-    border-radius: 5px;
 
     div {
         background: #0A0A0A;

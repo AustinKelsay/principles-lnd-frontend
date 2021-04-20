@@ -18,7 +18,7 @@ const Principles = () => {
     },[])
 
     return (
-        <InfiniteScroll dataLength={principles.length} >
+        <InfiniteScroll dataLength={principles.length} height={'75vh'} style={{width: '60%', border: '2px solid oldlace', borderRadius: '5px', margin: '0 auto'}} >
             <div className="principles">
                 {
                     principles.length
