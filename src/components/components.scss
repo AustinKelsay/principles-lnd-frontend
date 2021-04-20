@@ -1,8 +1,9 @@
 // https://coolors.co/058ed9-fdfffc-f5141f-000000-adadad
-$red-gradient: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+$red-gradient: linear-gradient(to bottom, rgb(255, 0, 0), rgb(234, 2, 2), rgb(213, 3, 3), rgb(193, 5, 5), rgb(172, 7, 7), rgb(151, 9, 9), 
+rgb(130, 10, 10), rgb(109, 12, 12), rgb(88, 14, 14), rgb(68, 16, 16), rgb(47, 17, 17), rgb(26, 19, 19));
 $black-gradient: linear-gradient(to bottom, #000000 0%, #434343 74%);
 $red: #F5141F;
-$grey: #ADADAD;
+$grey: #666666;
 $blue: #058ED9;
 
 .header {
@@ -10,18 +11,20 @@ $blue: #058ED9;
     flex-direction: column;
     width: 60%;
     margin: 1% auto;
-    background: $grey;
-    border: 2px solid $red;
+    background-image: $black-gradient;
+    border: 2px solid white;
     border-radius: 5px;
 
     h1 {
         margin: 1% auto;
         margin-bottom: 0%;
+        color: white;
     }
 
     h4 {
         margin: 1% auto;
         margin-bottom: 0%;
+        color: white;
     }
 
     div {
@@ -35,7 +38,7 @@ $blue: #058ED9;
             width: 20%;
             font-size: large;
             padding: 2%;
-            background: linear-gradient(to bottom, #eb0000 17%, #000000 91%);
+            background: $red-gradient;
             border: 1px solid oldlace;
             border-radius: 10px;
             color: oldlace;
@@ -58,7 +61,7 @@ $blue: #058ED9;
     border-radius: 5px;
 
     div {
-        background: $black-gradient;
+        background: #0A0A0A;
         color: oldlace;
         border: 1px solid oldlace;
         border-radius: 25px;
@@ -93,7 +96,7 @@ $blue: #058ED9;
         div {
             display: flex;
             justify-content: space-between;
-            width: 95%;
+            width: 100%;
             margin-bottom: 0;
             padding: 0.5%;
             padding-top: 2%;
@@ -110,6 +113,7 @@ $blue: #058ED9;
                 border-radius: 10px;
                 color: oldlace;
                 font-weight: 600;
+                font-size: 1rem;
             }
 
             button:hover {
