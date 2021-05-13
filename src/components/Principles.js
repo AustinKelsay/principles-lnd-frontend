@@ -41,7 +41,9 @@ const Principles = () => {
                         )
                     })
                     :
-                    <p>Loading...</p>
+                    <div>
+                        <p>Loading...</p>
+                    </div>
                 }
             </div>
         </InfiniteScroll>
