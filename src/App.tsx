@@ -11,7 +11,7 @@ const App = () => {
         <div className="app">
             <Header />
             <Route exact path='/' component={Principles}/>
-            <Route path='login' component={Login} />
+            {/* <Route path='login' component={Login} /> */}
         </div>
     )
 }

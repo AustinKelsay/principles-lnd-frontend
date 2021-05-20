@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 
 const Login = () => {
     const [credentials, setCredentials] = useState({
@@ -6,29 +7,29 @@ const Login = () => {
         password: '',
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
     };
 
-    const loginReq = (e) => {
+    const loginReq = (e: any) => {
         e.preventDefault();
         axios
           .post(
             'https://priciples-lnd.herokuapp.com/auth/login',
             credentials
           )
-          .then((res) => {
+          .then((res: any) => {
             console.log(res);
             localStorage.setItem('token', res.data.token);
             // props.addAdmin(res.data.user.admin);
             // history.push('/protected');
           })
-          .catch((err) => console.log({ err }));
+          .catch((err: Error) => console.log({ err }));
     };
 
     return (
         <div className="login_container">
-          <Header as="h2">Login</Header>
+          {/* <Header as="h2">Login</Header>
           <div className="input_con">
             <form className="login_form" onSubmit={loginReq}>
               <label>
@@ -63,7 +64,7 @@ const Login = () => {
             <Link to="/register" className="log_link">
               Register
             </Link>
-          </div>
+          </div> */}
         </div>
     )
 }
