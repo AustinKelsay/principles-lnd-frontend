@@ -17,6 +17,17 @@ const Principles = () => {
         })
     },[])
 
+    const fetchPrinciples = () => {
+        axios.get('https://priciples-lnd.herokuapp.com/principles')
+        .then((res) => {
+            setPrinciples(res.data)
+        })
+        .catch
+        ((err) => {
+            console.log(err)
+        })
+    }
+
     return (
         <InfiniteScroll 
             dataLength={principles.length} 
@@ -24,13 +35,13 @@ const Principles = () => {
             style={{width: '60%', border: '2px solid oldlace', borderRadius: '5px', margin: '0 auto'}} 
             hasMore={false}
             loader={<h4>Loading...</h4>}
-            next={() => {return null}}
+            next={fetchPrinciples}
             >
             <div className="principles">
                 {
                     principles.length
                     ?
-                    principles.map((principle) => {
+                    principles.map((principle: any) => {
                         return(
                             <div key={uuidv4()}>
                                 <span>Problem</span>
