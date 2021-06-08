@@ -5,11 +5,10 @@ $red: #F5141F;
 $grey: #353535;
 $blue: #058ED9;
 
-.app {
+body {
     background-color: #000000;
     background-image: $black-gradient;
-    border: 2px solid $red;
     border-radius: 25px;
-    height: 98vh;
+    height: 100vh;
     font-family: "Century Gothic W01 Bold", sans-serif;
 }
