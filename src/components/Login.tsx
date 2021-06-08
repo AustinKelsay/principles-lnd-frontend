@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios'
+import "./components.scss"
 
 const Login = () => {
     const [credentials, setCredentials] = useState({
@@ -29,8 +31,8 @@ const Login = () => {
 
     return (
         <div className="login_container">
-          {/* <Header as="h2">Login</Header>
-          <div className="input_con">
+          <h1>Login</h1>
+          <div>
             <form className="login_form" onSubmit={loginReq}>
               <label>
                 {' '}
@@ -55,7 +57,7 @@ const Login = () => {
               </label>
 
               <br />
-              <Button content="Log In" />
+              <button>Login</button>
             </form>
           </div>
           <br />
@@ -64,7 +66,7 @@ const Login = () => {
             <Link to="/register" className="log_link">
               Register
             </Link>
-          </div> */}
+          </div>
         </div>
     )
 }
