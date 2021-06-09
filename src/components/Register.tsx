@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import "./components.scss"
 
-const Register = () => {
+const Register = (props) => {
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
@@ -13,20 +13,21 @@ const Register = () => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
     };
 
-    const loginReq = (e: any) => {
+    const registerReq = (e: any) => {
         e.preventDefault();
         axios
           .post(
-            'https://priciples-lnd.herokuapp.com/auth/login',
+            'https://priciples-lnd.herokuapp.com/auth/register',
             credentials
           )
           .then((res: any) => {
             console.log(res);
-            localStorage.setItem('token', res.data.token);
-            // props.addAdmin(res.data.user.admin);
-            // history.push('/protected');
+            props.history.push('/login');
           })
-          .catch((err: Error) => console.log({ err }));
+          .catch((err: Error) => {
+              console.log({ err })
+              alert(`Error: ${err}`)
+            });
     };
 
     return (
