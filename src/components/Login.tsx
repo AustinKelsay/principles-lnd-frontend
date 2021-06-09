@@ -57,7 +57,7 @@ const Login = () => {
               </label>
 
               <br />
-              <button>Login</button>
+              <button onClick={loginReq}>Login</button>
             </form>
           </div>
           <br />
