@@ -63,7 +63,7 @@ const Login = () => {
           <br />
           <div>
             <h3>Don't have an account?</h3>
-            <Link to="/register" className="log_link">
+            <Link to="/register">
               Register
             </Link>
           </div>
