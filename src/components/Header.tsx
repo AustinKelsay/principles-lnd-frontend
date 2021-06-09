@@ -10,7 +10,7 @@ const Header = () => {
             <h4>A Bitcoin Lightning enabled posting board inspired by Ray Dalio's principles format</h4>
             <div>
                 <button onClick={() => history.push('/login')}>Login</button>
-                <button>Sign up</button>
+                <button onClick={() => history.push('/register')}>Sign up</button>
             </div>
         </div>
     )
