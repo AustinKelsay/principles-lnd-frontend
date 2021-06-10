@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import "./components.scss"
 
-const Register = (props) => {
+const Register = (props: any) => {
+    const [buttonDisabled, setButtonDisabled] = useState(false);
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
@@ -15,6 +16,8 @@ const Register = (props) => {
 
     const registerReq = (e: any) => {
         e.preventDefault();
+        setButtonDisabled(true)
+
         axios
           .post(
             'https://priciples-lnd.herokuapp.com/auth/register',
@@ -22,6 +25,7 @@ const Register = (props) => {
           )
           .then((res: any) => {
             console.log(res);
+            setButtonDisabled(false)
             props.history.push('/login');
           })
           .catch((err: Error) => {
@@ -34,7 +38,7 @@ const Register = (props) => {
         <div className="register_container">
           <h1>Create an account</h1>
           <div>
-            <form onSubmit={loginReq}>
+            <form onSubmit={registerReq}>
               <label>
                 {' '}
                 Username
@@ -54,9 +58,8 @@ const Register = (props) => {
                   onChange={handleChange}
                 />
               </label>
-
               <br />
-              <button onClick={loginReq}>Submit</button>
+              <button disabled={buttonDisabled} onClick={registerReq}>Submit</button>
             </form>
           </div>
           <br />

@@ -15,7 +15,7 @@ const App = () => {
             <Header />
             <Route exact path='/' component={Principles}/>
             <Route exact path='/login' component={Login} />
-            <Route exact path='/register' component={Register} />
+            <Route exact path='/register' render={(props) => <Register {...props} /> } />
         </div>
     )
 }
