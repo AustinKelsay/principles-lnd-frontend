@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import "./components.scss"
 
-const Login = () => {
+const Login = (props: any) => {
+    const [buttonDisabled, setButtonDisabled] = useState(false);
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
@@ -15,6 +16,9 @@ const Login = () => {
 
     const loginReq = (e: any) => {
         e.preventDefault();
+        setButtonDisabled(true)
+
+
         axios
           .post(
             'https://priciples-lnd.herokuapp.com/auth/login',
@@ -23,8 +27,8 @@ const Login = () => {
           .then((res: any) => {
             console.log(res);
             localStorage.setItem('token', res.data.token);
-            // props.addAdmin(res.data.user.admin);
-            // history.push('/protected');
+            setButtonDisabled(false)
+            props.history.push('/');
           })
           .catch((err: Error) => console.log({ err }));
     };
@@ -57,7 +61,7 @@ const Login = () => {
               </label>
 
               <br />
-              <button onClick={loginReq}>Login</button>
+              <button disabled={buttonDisabled} onClick={loginReq}>Login</button>
             </form>
           </div>
           <br />

@@ -14,7 +14,7 @@ const App = () => {
         <div className="app">
             <Header />
             <Route exact path='/' component={Principles}/>
-            <Route exact path='/login' component={Login} />
+            <Route exact path='/login' render={(props) => <Login {...props} />} />
             <Route exact path='/register' render={(props) => <Register {...props} /> } />
         </div>
     )
