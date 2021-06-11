@@ -37,7 +37,7 @@ const Principles = () => {
             loader={<h4>Loading...</h4>}
             next={fetchPrinciples}
             >
-            <div className="principles">
+            <div className={principles.length ? 'principles' : 'principles-loading'}>
                 {
                     principles.length
                     ?
@@ -60,7 +60,7 @@ const Principles = () => {
                     })
                     :
                     <div>
-                        <p>Loading...</p>
+                        <h3>Loading...</h3>
                     </div>
                 }
             </div>

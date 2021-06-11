@@ -122,6 +122,19 @@ $blue: #058ED9;
     }
 }
 
+.principles-loading {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: $red-gradient;
+
+    h3 {
+        text-align: center;
+        font-weight: 800;
+    }
+}
+
 // Login
 
 .login_container {
