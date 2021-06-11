@@ -8,6 +8,10 @@ const Register = (props: any) => {
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
+        host: '',
+        cert: '',
+        macaroon: '',
+        pubkey: ''
     });
 
     const handleChange = (e: any) => {
@@ -55,6 +59,36 @@ const Register = (props: any) => {
                   type="password"
                   name="password"
                   value={credentials.password}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                {' '}
+                LND Host
+                <input
+                  type="text"
+                  name="host"
+                  value={credentials.host}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                {' '}
+                TLS Certification
+                <input
+                  type="text"
+                  name="cert"
+                  value={credentials.cert}
+                  onChange={handleChange}
+                />
+              </label>
+              <label>
+                {' '}
+                Macaroon
+                <input
+                  type="text"
+                  name="macaroon"
+                  value={credentials.macaroon}
                   onChange={handleChange}
                 />
               </label>
