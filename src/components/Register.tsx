@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Tooltip} from "reactstrap";
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import "./components.scss"
@@ -13,6 +14,8 @@ const Register = (props: any) => {
         macaroon: '',
         pubkey: ''
     });
+    const [tooltipOpen, setTooltipOpen] = useState(false);
+    const toggle = () => setTooltipOpen(!tooltipOpen);
 
     const handleChange = (e: any) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -43,6 +46,10 @@ const Register = (props: any) => {
           <h1>Create an account</h1>
           <div>
             <form onSubmit={registerReq}>
+            <p id="TooltipExample">Somewhere in here is a tooltip.</p>
+            <Tooltip placement="right" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+              Hello world!
+            </Tooltip>
               <label>
                 {' '}
                 Username
