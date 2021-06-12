@@ -76,6 +76,7 @@ const Register = (props: any) => {
                 {' '}
                 TLS Certification
                 <input
+                  id='cert-input'
                   type="text"
                   name="cert"
                   value={credentials.cert}
