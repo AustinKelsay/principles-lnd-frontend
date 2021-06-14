@@ -43,7 +43,7 @@ const Register = (props: any) => {
 
     return (
         <div className="register_container">
-          <h1>Create an account</h1>
+          <h1>Create an account with LND</h1>
           <div>
             <form onSubmit={registerReq}>
             <p id="TooltipExample">Somewhere in here is a tooltip.</p>
