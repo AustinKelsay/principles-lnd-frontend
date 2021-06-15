@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Tooltip} from "reactstrap";
+import { FaQuestion } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import "./components.scss"
@@ -46,9 +47,9 @@ const Register = (props: any) => {
           <h1>Create an account with LND</h1>
           <div>
             <form onSubmit={registerReq}>
-            <p id="TooltipExample">Somewhere in here is a tooltip.</p>
-            <Tooltip placement="right" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
-              Hello world!
+            <FaQuestion id="Tooltip"/>
+            <Tooltip placement="right" isOpen={tooltipOpen} target="Tooltip" toggle={toggle}>
+              <p id='tooltip-text'>Testing</p>
             </Tooltip>
               <label>
                 {' '}
