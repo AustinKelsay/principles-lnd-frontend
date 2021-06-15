@@ -32,7 +32,7 @@ const Principles = () => {
         <InfiniteScroll 
             dataLength={principles.length} 
             height={'75vh'} 
-            style={{width: '60%', border: '2px solid oldlace', borderRadius: '5px', margin: '0 auto'}} 
+            style={{width: '80%', border: '2px solid oldlace', borderRadius: '5px', margin: '0 auto'}} 
             hasMore={false}
             loader={<h4>Loading...</h4>}
             next={fetchPrinciples}
