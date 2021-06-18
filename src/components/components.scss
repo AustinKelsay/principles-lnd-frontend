@@ -224,9 +224,16 @@ $blue: #058ED9;
     }
 }
 
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: center;
+}
+
 #Tooltip {
     font-size: 1.3rem;
-    margin: 1%;
+    margin: 2.5%;
     color: white;
     padding: 1%;
     border: 1px solid white;

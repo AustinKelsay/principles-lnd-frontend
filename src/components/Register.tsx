@@ -44,10 +44,12 @@ const Register = (props: any) => {
 
     return (
         <div className="register_container">
-          <h1>Create an account with LND</h1>
+          <div className='header-container'>
+            <h1>Create an account with LND</h1>
+            <FaQuestion id="Tooltip"/>
+          </div>
           <div>
             <form onSubmit={registerReq}>
-            <FaQuestion id="Tooltip"/>
             <Tooltip placement="right" isOpen={tooltipOpen} target="Tooltip" toggle={toggle}>
               <p id='tooltip-text'>Testing</p>
             </Tooltip>
