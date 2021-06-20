@@ -51,7 +51,7 @@ const Register = (props: any) => {
           <div>
             <form onSubmit={registerReq}>
             <Tooltip placement="right" isOpen={tooltipOpen} target="Tooltip" toggle={toggle}>
-              <p id='tooltip-text'>Testing</p>
+              <p id='tooltip-text'>Use your public lightning node credentials to register account</p>
             </Tooltip>
               <label>
                 {' '}
