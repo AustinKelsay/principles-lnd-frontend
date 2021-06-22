@@ -37,9 +37,10 @@ const Register = (props: any) => {
             props.history.push('/login');
           })
           .catch((err: Error) => {
-              console.log({ err })
-              alert(`Error: ${err}`)
-            });
+            console.log({ err })
+            alert(`Error: ${err}`)
+            window.location.reload()
+          });
     };
 
     return (
