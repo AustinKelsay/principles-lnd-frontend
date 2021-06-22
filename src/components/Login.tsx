@@ -32,7 +32,8 @@ const Login = (props: any) => {
           })
           .catch((err: Error) => {
             console.log({ err })
-            props.history.push('/login')
+            alert(`Error: ${err}`)
+            window.location.reload()
         });
     };
 
