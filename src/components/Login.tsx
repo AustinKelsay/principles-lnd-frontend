@@ -30,7 +30,10 @@ const Login = (props: any) => {
             setButtonDisabled(false)
             props.history.push('/');
           })
-          .catch((err: Error) => console.log({ err }));
+          .catch((err: Error) => {
+            console.log({ err })
+            props.history.push('/login')
+        });
     };
 
     return (
