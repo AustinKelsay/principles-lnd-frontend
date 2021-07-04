@@ -1,9 +1,13 @@
 import React from "react"
+import { useSelector } from "react-redux";
 import { useHistory, Link } from 'react-router-dom';
 import "./components.scss"
 
 const Header = () => {
     const history = useHistory();
+    const user = useSelector(state => state)
+
+    console.log(user)
     return (
         <div className="header">
             <h1>Principles</h1>

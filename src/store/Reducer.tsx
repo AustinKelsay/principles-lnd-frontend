@@ -1,9 +1,11 @@
 import {GET_USER, ADD_USER} from './Actions'
 
-const initialState = {
-    user: {
-        id: null
-    }
+type User = {
+    id: number
+}
+
+const initialState:User = {
+    id: 0
 }
 
 export function Reducer (state:any = initialState, action:any) {
