@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {useDispatch} from 'react-redux'
 import axios from 'axios'
 import "./components.scss"
+import { ADD_USER } from '../store/Actions';
 
 const Login = (props: any) => {
     const [buttonDisabled, setButtonDisabled] = useState(false);
+    const dispatch = useDispatch()
     const [credentials, setCredentials] = useState({
         username: '',
         password: '',
@@ -27,6 +30,7 @@ const Login = (props: any) => {
           .then((res: any) => {
             console.log(res);
             localStorage.setItem('token', res.data.token);
+            dispatch({type: ADD_USER, payload: res.data.user})
             setButtonDisabled(false)
             props.history.push('/');
           })

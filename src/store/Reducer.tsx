@@ -2,7 +2,7 @@ import {GET_USER, ADD_USER} from './Actions'
 
 const initialState = {
     user: {
-        id: 0
+        id: null
     }
 }
 
@@ -12,7 +12,8 @@ export function Reducer (state:any = initialState, action:any) {
             return state.user
         }
         case ADD_USER: {
-            return {...state, user: action.apyload}
+            console.log(action.payload)
+            return {...state, user: action.payload}
         }
         default: return state;
     }
