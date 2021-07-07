@@ -64,6 +64,10 @@ $blue: #058ED9;
     width: 100%;
     background: $red-gradient;
 
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
     div {
         background: #0A0A0A;
         color: oldlace;
