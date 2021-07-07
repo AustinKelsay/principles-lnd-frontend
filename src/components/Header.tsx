@@ -1,11 +1,14 @@
 import React from "react"
+import { RootState } from "../store/Reducer";
 import { useSelector } from "react-redux";
 import { useHistory, Link } from 'react-router-dom';
 import "./components.scss"
 
 const Header = () => {
     const history = useHistory();
-    const user = useSelector(state => state)
+    const user = useSelector((state: RootState) => {
+        return state;
+      });
     console.log(user)
 
     return (

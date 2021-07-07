@@ -23,6 +23,8 @@ const initialState:User = {
     username: '',
 }
 
+export type RootState = ReturnType<typeof Reducer>
+
 export function Reducer (state:any = initialState, action:any) {
     switch(action.type) {
         case GET_USER: {
