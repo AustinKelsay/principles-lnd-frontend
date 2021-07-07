@@ -28,6 +28,8 @@ const Header = () => {
             <h1>Principles</h1>
             <h4>A Bitcoin Lightning enabled posting board inspired by Ray Dalio's principles format</h4>
             <div>
+                <h5>Username: {user.state.username}</h5>
+                <h5>Node hostname: {user.state.host}</h5>
             </div>
         </div>
     )
