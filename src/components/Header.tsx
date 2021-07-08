@@ -28,8 +28,9 @@ const Header = () => {
             <h1>Principles</h1>
             <h4>A Bitcoin Lightning enabled posting board inspired by Ray Dalio's principles format</h4>
             <div>
-                <h5>Username: {user.state.username}</h5>
-                <h5>Node hostname: {user.state.host}</h5>
+                <button onClick={() => history.push('/')}>Home</button>
+                <h3>Username: {user.state.username}</h3>
+                <h3>Node hostname: {user.state.host}</h3>
                 <button onClick={() => history.push('/profile')}>Profile</button>
             </div>
         </div>
