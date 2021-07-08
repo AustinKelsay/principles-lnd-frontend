@@ -30,6 +30,7 @@ const Header = () => {
             <div>
                 <h5>Username: {user.state.username}</h5>
                 <h5>Node hostname: {user.state.host}</h5>
+                <button onClick={() => history.push('/profile')}>Profile</button>
             </div>
         </div>
     )
