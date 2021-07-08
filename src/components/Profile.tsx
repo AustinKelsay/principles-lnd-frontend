@@ -12,10 +12,12 @@ const Profile = () => {
 
     return (
         <div className="profile">
-            <h1>Node hostname: {user.host}</h1>
-            <h4>Public key: {user.pubkey}</h4>
-            <h4>TLS Cert: {user.cert}</h4>
-            <h4>Admin Macaroon: {user.macaroon}</h4>
+            <div>
+                <h1>Node hostname: {user.state.host}</h1>
+                <h4>Public key: {user.state.pubkey}</h4>
+                <h4>TLS Cert: {user.state.cert}</h4>
+                <h4>Admin Macaroon: {user.state.macaroon}</h4>
+            </div>
         </div>
     )
 }
