@@ -10,6 +10,7 @@ const Principles = () => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
             setPrinciples(res.data)
+            setPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
@@ -21,12 +22,14 @@ const Principles = () => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
             setPrinciples(res.data)
+            setPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
             console.log(err)
         })
     }
+
 
     return (
         <InfiniteScroll 
