@@ -38,11 +38,11 @@ $blue: #058ED9;
     }
 
     div {
-        width: 60%;
+        width: 80%;
         margin: 1% auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         
         button {
             width: 20%;
@@ -57,6 +57,14 @@ $blue: #058ED9;
         button:hover {
             opacity: 0.7;
             cursor: pointer;
+        }
+
+        .btn-logged-in {
+            padding: 0%;
+            background: $red-gradient;
+            border: 1px solid oldlace;
+            border-radius: 10px;
+            color: oldlace;
         }
 
         ul {

@@ -28,12 +28,12 @@ const Header = () => {
             <h1>Principles</h1>
             <h4>A Bitcoin Lightning enabled posting board inspired by Ray Dalio's principles format</h4>
             <div>
-                <button onClick={() => history.push('/')}>Home</button>
+                <button className='btn-logged-in' onClick={() => history.push('/')}>Home</button>
                 <ul>
                     <h3>Username: {user.state.username}</h3>
                     <h3>Node hostname: {user.state.host}</h3>
                 </ul>
-                <button onClick={() => history.push('/profile')}>Profile</button>
+                <button className='btn-logged-in' onClick={() => history.push('/profile')}>Profile</button>
             </div>
         </div>
     )
