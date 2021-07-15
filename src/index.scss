@@ -5,10 +5,9 @@ $red: #F5141F;
 $grey: #353535;
 $blue: #058ED9;
 
-body {
-    background-color: #000000;
+html {
+    background-color: $grey;
     background-image: $black-gradient;
     border-radius: 25px;
-    height: 100vh;
     font-family: "Century Gothic W01 Bold", sans-serif;
 }

@@ -26,7 +26,6 @@ const Header = () => {
         :
         <div className="header">
             <h1>Principles</h1>
-            <h4>A Bitcoin Lightning enabled posting board inspired by Ray Dalio's principles format</h4>
             <div>
                 <button className='btn-logged-in' onClick={() => history.push('/')}>Home</button>
                 <ul>
