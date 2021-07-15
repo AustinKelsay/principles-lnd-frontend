@@ -9,8 +9,8 @@ const Principles = () => {
     useEffect(() => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
-            setPrinciples(res.data)
-            setPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
+            console.log(res);
+            setPrinciples(res.data.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
@@ -21,8 +21,7 @@ const Principles = () => {
     const fetchPrinciples = () => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
-            setPrinciples(res.data)
-            setPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
+            setPrinciples(res.data.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
