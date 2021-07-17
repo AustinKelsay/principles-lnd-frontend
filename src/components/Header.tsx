@@ -29,8 +29,7 @@ const Header = () => {
             <div>
                 <button className='btn-logged-in' onClick={() => history.push('/')}>Home</button>
                 <ul>
-                    <h3>Username: {user.state.username}</h3>
-                    <h3>Node hostname: {user.state.host}</h3>
+                    <h5>Node hostname: {user.state.host}</h5>
                 </ul>
                 <button className='btn-logged-in' onClick={() => history.push('/profile')}>Profile</button>
             </div>
