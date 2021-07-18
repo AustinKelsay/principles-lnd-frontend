@@ -310,7 +310,7 @@ $blue: #058ED9;
 
     hr {
         font-size: 1rem;
-        width: 100%;
+        width: 99%;
         color: white;
         text-decoration: dashed;
         margin-bottom: 3%;
@@ -347,34 +347,34 @@ $blue: #058ED9;
             font-weight: 800;
         }
 
-        div {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 0;
-            padding: 0.5%;
-            padding-top: 2%;
-            border: none;
-            background: none;
-            border-top: 1px solid white;
-            border-radius: 0%;
-
-            button {
-                margin: 1%;
-                background: $blue;
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 0;
                 padding: 0.5%;
-                border: 1px solid oldlace;
-                border-radius: 10px;
-                color: oldlace;
-                font-weight: 600;
-                font-size: 1rem;
-            }
+                padding-top: 2%;
+                border: none;
+                background: none;
+                border-top: 1px solid white;
+                border-radius: 0%;
 
-            button:hover {
-                opacity: 0.8;
-                cursor: pointer;
+                button {
+                    margin: 1%;
+                    background: $blue;
+                    padding: 0.5%;
+                    border: 1px solid oldlace;
+                    border-radius: 10px;
+                    color: oldlace;
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+
+                button:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
             }
-        }
     }
 }
 
