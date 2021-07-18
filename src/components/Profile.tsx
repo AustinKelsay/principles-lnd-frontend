@@ -48,12 +48,12 @@ const Profile = () => {
             next={fetchPrinciples}
         >
                 <div className="profile">
-                    <div>
+                    <section>
                         <h1>Node hostname: {user.state.host}</h1>
                         <h4>Public key: {user.state.pubkey}</h4>
                         <h4>TLS Cert: {user.state.cert}</h4>
                         <h4>Admin Macaroon: {user.state.macaroon}</h4>
-                    </div>
+                    </section>
                     <h3>My principles</h3>
                     <hr></hr>
                 {
