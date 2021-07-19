@@ -18,8 +18,10 @@ const Profile = () => {
     useEffect(() => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
-            console.log(res);
-            setUserPrinciples(res.data.sort((a:any, b:any) => b.votes - a.votes))
+            const principles = res.data.filter((principle:any) => {
+                return principle.user_id === user.state.id
+            })
+            setUserPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
@@ -30,7 +32,10 @@ const Profile = () => {
     const fetchPrinciples = () => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
         .then((res) => {
-            setUserPrinciples(res.data.sort((a:any, b:any) => b.votes - a.votes))
+            const principles = res.data.filter((principle:any) => {
+                return principle.user_id === user.state.id
+            })
+            setUserPrinciples(principles.sort((a:any, b:any) => b.votes - a.votes))
         })
         .catch
         ((err) => {
