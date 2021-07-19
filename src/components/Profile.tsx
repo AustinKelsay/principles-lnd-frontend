@@ -9,11 +9,19 @@ import "./components.scss"
 
 const Profile = () => {
     const history = useHistory();
+    const [buttonDisabled, setButtonDisabled] = useState(false);
     const user = useSelector((state: RootState) => {
         return state;
       });
-
     const [userPrinciples, setUserPrinciples] = useState([])
+    const [addPrinciple, setAddPrinciple] = useState(false)
+    const [principle, setPrinciple] = useState({
+        user_id: user.state.id,
+        user: user.state.host,
+        problem: "", 
+        diagnosis: "",
+        change: ""
+    });
 
     useEffect(() => {
         axios.get('https://priciples-lnd.herokuapp.com/principles')
@@ -43,6 +51,31 @@ const Profile = () => {
         })
     }
 
+    const handleChange = (e: any) => {
+        setPrinciple({ ...principle, [e.target.name]: e.target.value });
+    };
+
+    const registerReq = (e: any) => {
+        e.preventDefault();
+        setButtonDisabled(true)
+
+        axios
+          .post(
+            'https://priciples-lnd.herokuapp.com/principles',
+            principle
+          )
+          .then((res: any) => {
+            console.log(res);
+            setButtonDisabled(false)
+            history.push('/profile');
+          })
+          .catch((err: Error) => {
+            console.log({ err })
+            alert(`Error: ${err}`)
+            window.location.reload()
+          });
+    };
+
     return (
         <InfiniteScroll 
             dataLength={userPrinciples.length} 
@@ -62,9 +95,45 @@ const Profile = () => {
                     <h3>My principles</h3>
                     <hr></hr>
                     <nav>
-                        <button>Add principle</button>
+                        <button onClick={() => setAddPrinciple(!addPrinciple)}>Add principle</button>
                     </nav>
                 {
+                    addPrinciple 
+                    ?
+                    <form onSubmit={registerReq}>
+                      <label>
+                        {' '}
+                        Problem
+                        <input
+                          type="text"
+                          name="problem"
+                          value={principle.problem}
+                          onChange={handleChange}
+                        />
+                      </label>
+                      <label>
+                        Diagnosis
+                        <input
+                          type="text"
+                          name="diagnosis"
+                          value={principle.diagnosis}
+                          onChange={handleChange}
+                        />
+                      </label>
+                      <label>
+                        {' '}
+                        Change
+                        <input
+                          type="text"
+                          name="change"
+                          value={principle.change}
+                          onChange={handleChange}
+                        />
+                      </label>
+                      <br />
+                      <button disabled={buttonDisabled} onClick={registerReq}>Submit</button>
+                    </form>
+                    :
                     userPrinciples.map((principle: any) => {
                         return(
                             <div key={uuidv4()}>
