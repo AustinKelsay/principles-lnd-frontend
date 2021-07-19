@@ -56,6 +56,9 @@ const Profile = () => {
                     </section>
                     <h3>My principles</h3>
                     <hr></hr>
+                    <nav>
+                        <button>Add principle</button>
+                    </nav>
                 {
                     userPrinciples.map((principle: any) => {
                         return(
