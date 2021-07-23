@@ -415,6 +415,51 @@ $blue: #058ED9;
     }
 }
 
+.add-principle {
+    background: #0A0A0A;
+    color: oldlace;
+    border: 1px solid oldlace;
+    border-radius: 25px;
+    width: 60%;
+    margin: 0% auto;
+    padding: 1%;
+    text-align: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: oldlace;
+        width: 60%;
+        margin: 1% auto;
+        text-align: center;
+    }
+
+    label {
+        margin: 1% auto;
+        padding: 1%;
+        color: white;
+        font-weight: 800;
+    }
+
+    input {
+        width: 15vw;
+        display: flex;
+    }
+
+    button {
+        width: 40%;
+        margin: 1% auto;
+        background: $blue;
+        padding: 0.5%;
+        border: 1px solid oldlace;
+        border-radius: 10px;
+        color: oldlace;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
 .user-principles {
     display: flex;
     flex-direction: column;

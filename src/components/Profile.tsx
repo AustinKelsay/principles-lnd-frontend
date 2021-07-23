@@ -100,39 +100,41 @@ const Profile = () => {
                 {
                     addPrinciple 
                     ?
-                    <form onSubmit={registerReq}>
-                      <label>
-                        {' '}
-                        Problem
-                        <input
-                          type="text"
-                          name="problem"
-                          value={principle.problem}
-                          onChange={handleChange}
-                        />
-                      </label>
-                      <label>
-                        Diagnosis
-                        <input
-                          type="text"
-                          name="diagnosis"
-                          value={principle.diagnosis}
-                          onChange={handleChange}
-                        />
-                      </label>
-                      <label>
-                        {' '}
-                        Change
-                        <input
-                          type="text"
-                          name="change"
-                          value={principle.change}
-                          onChange={handleChange}
-                        />
-                      </label>
-                      <br />
-                      <button disabled={buttonDisabled} onClick={registerReq}>Submit</button>
-                    </form>
+                    <div className="add-principle">
+                      <form onSubmit={registerReq}>
+                        <label>
+                          {' '}
+                          Problem
+                          <input
+                            type="text"
+                            name="problem"
+                            value={principle.problem}
+                            onChange={handleChange}
+                            />
+                        </label>
+                        <label>
+                          Diagnosis
+                          <input
+                            type="text"
+                            name="diagnosis"
+                            value={principle.diagnosis}
+                            onChange={handleChange}
+                            />
+                        </label>
+                        <label>
+                          {' '}
+                          Change
+                          <input
+                            type="text"
+                            name="change"
+                            value={principle.change}
+                            onChange={handleChange}
+                            />
+                        </label>
+                        <br />
+                        <button disabled={buttonDisabled} onClick={registerReq}>Submit</button>
+                      </form>
+                    </div>
                     :
                     userPrinciples.map((principle: any) => {
                         return(
